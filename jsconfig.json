@@ -1,0 +1,16 @@
+{
+  "exclude": ["dist", "build"],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "Actions/*": ["./src/actions"],
+      "Assets/*": ["./src/assets"],
+      "Components/*": ["./src/components"],
+      "Context/*": ["./src/context"],
+      "Icons/*": ["./src/assets/images/svg/icons"],
+      "Middleware/*": ["./src/middleware"],
+      "Pages/*": ["./src/pages"],
+      "ProjectRoot/*": ["./src"],
+      "Reducers/*": ["./src/reducers"]
+    }
+}

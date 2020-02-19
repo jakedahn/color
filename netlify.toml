@@ -1,0 +1,12 @@
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build]
+  command = "npm run dist"
+  publish = "dist"
+
+[context.production]
+  [context.production.environment]
+    NODE_ENV = "production"
