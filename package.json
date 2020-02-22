@@ -20,9 +20,7 @@
     "react-dom": "^16.12.0",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
-    "typeface-inter": "^3.12.0"
-  },
-  "devDependencies": {
+    "typeface-inter": "^3.12.0",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.3",
@@ -54,5 +52,6 @@
     "url-loader": "^3.0.0",
     "webpack-dev-server": "^3.10.3"
   },
+  "devDependencies": {},
   "license": "MIT"
 }
