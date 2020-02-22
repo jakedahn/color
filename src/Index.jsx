@@ -9,7 +9,7 @@ import React from "react"
 import ReactDOM from 'react-dom'
 import { Router, Redirect } from "@reach/router"
 
-import IndexPage from 'Pages/Index.jsx'
+import IndexPage from 'Pages/IndexPage.jsx'
 
 
 const App = (
@@ -18,5 +18,5 @@ const App = (
   </Router>
 )
 
-ReactDOM.render(App, document.getElementById('hammock-app')
+ReactDOM.render(App, document.getElementById('color-app')
 )

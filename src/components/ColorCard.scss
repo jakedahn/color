@@ -1,0 +1,55 @@
+.color-card {
+  background: #ffffff;
+  padding: 15px;
+  box-shadow: 0 10px 40px -10px rgba(0,64,128,.2);
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  .palette {
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    height: 250px;
+
+    .color-bar {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      align-items: center;
+      padding: 20px;
+
+      span.color-label {
+        flex-basis: auto;
+        font-size: 14px;
+        margin: 0;
+        color: transparent;
+        background: transparent;
+        padding: 4px;
+        border-radius: 4px;
+        transition: color 150ms, background 150ms;
+      }
+      &:hover {
+        span.color-label {
+          transition: color 300ms, background 300ms;
+          color: #fff;
+          background: rgba(0,0,0,0.2)
+        }
+      }
+
+      &.primary { height: 40%; border-radius: 4px 4px 0 0}
+      &.secondary { height: 25%; }
+      &.third { height: 21%; }
+      &.fourth { height: 14%; border-radius: 0 0 4px 4px }
+    }
+  }
+  .meta {
+    padding-top: 15px;
+    .date {
+      text-align: right;
+    }
+    .like-btn {
+      border: 1px solid #e1e1e1;
+      color: #000
+    }
+  }
+}

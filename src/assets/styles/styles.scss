@@ -1,6 +1,9 @@
-@import '_variables.scss';
-@import "~typeface-inter/inter.css";
+@import './mixins';
+@import './bootstrap.scss';
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: $font-family-base;
+  background: #fafbfb;
 }
