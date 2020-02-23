@@ -11,7 +11,6 @@ export const ColorCard = ({ code, colors, likes, created_at, updated_at }) => {
   const color3 = colors.filter(color => color.position == 3)[0]
   const color4 = colors.filter(color => color.position == 4)[0]
 
-  console.log(created_at)
   return (
     <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
       <div className="color-card">
