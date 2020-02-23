@@ -30,8 +30,6 @@ export const ColorGrid = () => {
   if (loading || error) {
     return <p>{error ? error.message : 'Loading...'}</p>;
   }
-  console.log('data', data)
-
   return (
     <div className="color-grid row">
       {data.palettes.map((palette, i) => {
@@ -44,16 +42,6 @@ export const ColorGrid = () => {
       })}
     </div>
   )
-
-  return (
-    <select value={country} onChange={event => setCountry(event.target.value)}>
-      {data.countries.map(country => (
-        <option key={country.code} value={country.code}>
-          {country.name}
-        </option>
-      ))}
-    </select>
-  );
 }
 
 export default ColorGrid;
