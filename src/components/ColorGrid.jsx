@@ -1,22 +1,16 @@
 import './ColorGrid.scss'
 import React, { useEffect } from 'react';
 import ColorCard from './ColorCard.jsx'
-
-import colors from 'Pages/color-data.js'
-
-import React, {useState} from 'react';
-import ReactDOM from 'react-dom';
 import {ApolloClient, InMemoryCache, gql, useQuery} from '@apollo/client';
 
 // initialize a GraphQL client
 const client = new ApolloClient({
   cache: new InMemoryCache(),
-  uri: 'https://graphql.color.lol',
+  uri: `${process.env.API_URL}/graphql`,
   name: `react-${process.env.APOLLO_CLIENT_NAME}`
 });
 
-// write a GraphQL query that asks for names and codes for all countries
-const LIST_COUNTRIES = gql`
+const LIST_PALETTES = gql`
 query {
   palettes {
     code
@@ -31,14 +25,25 @@ query {
   }
 }`;
 
-// create a component that renders a select input for coutries
-function CountrySelect() {
-  const [country, setCountry] = useState('US');
-  const {data, loading, error} = useQuery(LIST_COUNTRIES, {client});
-
+export const ColorGrid = () => {
+  const {data, loading, error} = useQuery(LIST_PALETTES, {client});
   if (loading || error) {
     return <p>{error ? error.message : 'Loading...'}</p>;
   }
+  console.log('data', data)
+
+  return (
+    <div className="color-grid row">
+      {data.palettes.map((palette, i) => {
+        return <ColorCard key={i}
+                          code={palette.code}
+                          colors={palette.colors}
+                          likes={palette.likes}
+                          created_at={palette.created_at}
+                          updated_at={palette.updated_at} />
+      })}
+    </div>
+  )
 
   return (
     <select value={country} onChange={event => setCountry(event.target.value)}>
@@ -49,17 +54,6 @@ function CountrySelect() {
       ))}
     </select>
   );
-}
-
-
-export const ColorGrid = ({ data }) => {
-  return (
-    <div className="color-grid row">
-      {colors.map((color, i) => {
-        return <ColorCard key={i} id={color.id} code={color.code} date={color.date} likes={color.likes} />
-      })}
-    </div>
-  )
 }
 
 export default ColorGrid;

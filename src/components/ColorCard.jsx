@@ -3,28 +3,28 @@ import React, { useEffect } from 'react'
 
 import ColorBar from 'Components/ColorBar.jsx'
 
-
-export const ColorCard = ({ id, date, likes, code }) => {
-  const color1 = code.substring(0, 6)
-  const color2 = code.substring(6, 12)
-  const color3 = code.substring(12, 18)
-  const color4 = code.substring(18, 24)
-
+export const ColorCard = ({ code, colors, likes, created_at, updated_at }) => {
+  
+  const color1 = colors.filter(color => color.position == 1)[0]
+  const color2 = colors.filter(color => color.position == 2)[0]
+  const color3 = colors.filter(color => color.position == 3)[0]
+  const color4 = colors.filter(color => color.position == 4)[0]
+  console.log('color', color1.hex)
   return (
     <div className="col-12 col-sm-6 col-lg-4 col-xl-3">
       <div className="color-card">
         <div className="palette">
-          <ColorBar color={color1} position="primary" />
-          <ColorBar color={color2} position="secondary" />
-          <ColorBar color={color3} position="third" />
-          <ColorBar color={color4} position="fourth" />
+          <ColorBar color={color1.hex} position="primary" />
+          <ColorBar color={color2.hex} position="secondary" />
+          <ColorBar color={color3.hex} position="third" />
+          <ColorBar color={color4.hex} position="fourth" />
         </div>
         <div className="row meta">
           <div className="col-6">
             <a className="like-btn btn-default btn-sm" href="#">❤️ {likes}</a>
           </div>
           <div className="col-6 date">
-            <time>{date}</time>
+            <time>{created_at}</time>
           </div>
         </div>
       </div>

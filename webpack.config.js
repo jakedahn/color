@@ -121,8 +121,7 @@ module.exports.plugins.push(
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     'process.env.API_URL': JSON.stringify(process.env.API_URL),
-    'process.env.PLAID_ENV': JSON.stringify(process.env.PLAID_ENV),
-    'process.env.PLAID_WEBHOOK_URL': JSON.stringify(process.env.PLAID_WEBHOOK_URL),
+    'process.env.APOLLO_CLIENT_NAME': JSON.stringify(process.env.APOLLO_CLIENT_NAME),
   })
 );
 

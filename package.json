@@ -10,6 +10,7 @@
     "dist": "rm -rf build && webpack --mode ${NODE_ENV:-production} --output-path ${RELEASE_NAME:-./dist} --progress --config webpack.config.js"
   },
   "dependencies": {
+    "@apollo/client": "^3.0.0-beta.37",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@reach/router": "^1.3.1",
     "apollo-server-lambda": "^2.10.1",
