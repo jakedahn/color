@@ -6,6 +6,7 @@
 [build]
   command = "npm run dist"
   publish = "dist"
+  functions = "functions"
 
 [context.production]
   [context.production.environment]
