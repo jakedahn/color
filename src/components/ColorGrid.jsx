@@ -6,7 +6,7 @@ import {ApolloClient, InMemoryCache, gql, useQuery} from '@apollo/client';
 // initialize a GraphQL client
 const client = new ApolloClient({
   cache: new InMemoryCache(),
-  uri: `${process.env.API_URL}/graphql`,
+  uri: `${process.env.API_URL}`,
   name: `react-${process.env.APOLLO_CLIENT_NAME}`
 });
 
