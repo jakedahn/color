@@ -11,7 +11,7 @@ export const IndexPage = ({ data }) => {
   return (
     <div className="index-page">
       <Header />
-      <div className="container-fluid">
+      <div className="container">
         <ColorGrid />
       </div>
     </div>
