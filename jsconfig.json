@@ -13,4 +13,5 @@
       "ProjectRoot/*": ["./src"],
       "Reducers/*": ["./src/reducers"]
     }
+  }
 }
