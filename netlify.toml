@@ -11,3 +11,6 @@
 [context.production]
   [context.production.environment]
     NODE_ENV = "production"
+
+[dev]
+  autoLaunch = false

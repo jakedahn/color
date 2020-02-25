@@ -57,7 +57,8 @@
     "webpack-dev-server": "^3.10.3"
   },
   "devDependencies": {
-    "apollo": "^2.23.0"
+    "apollo": "^2.23.0",
+    "netlify-cli": "^2.35.0"
   },
   "license": "MIT"
 }

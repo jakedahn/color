@@ -31,7 +31,7 @@ export const ColorGrid = () => {
     return <p>{error ? error.message : 'Loading...'}</p>;
   }
   return (
-    <div className="color-grid row">
+    <div className="color-grid container">
       {data.palettes.map((palette, i) => {
         return <ColorCard key={i}
                           code={palette.code}

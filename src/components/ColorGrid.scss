@@ -1,3 +1,10 @@
 .color-grid {
+  display: grid;
+  grid-template-rows: 400px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
 
+  -webkit-perspective: 1300px;
+  perspective: 1300px;
 }
